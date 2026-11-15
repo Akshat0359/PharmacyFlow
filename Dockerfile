@@ -9,8 +9,10 @@ FROM ghcr.io/astral-sh/uv:0.12.18 AS uv
 FROM python:3.12.12-slim-bookworm
 COPY --from=uv /uv /usr/local/bin/uv
 WORKDIR /app
+ENV PYTHONPATH=/app
 ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy PATH="/app/.venv/bin:$PATH" PLAYWRIGHT_BROWSERS_PATH=/ms-playwright PYTHONUNBUFFERED=1
 COPY pyproject.toml uv.lock ./
+RUN apt-get update && apt-get install -y --no-install-recommends libatomic1 && rm -rf /var/lib/apt/lists/*
 RUN uv sync --frozen --no-dev && uv run --no-sync playwright install --with-deps chromium
 COPY pharmacyflow/ pharmacyflow/
 COPY migrations/ migrations/
