@@ -1,0 +1,5 @@
+{
+  "static_config": "passed",
+  "compose_config": "not_run_docker_unavailable",
+  "live_cloud": "not_run_requires_host_dns_and_paid_resources"
+}

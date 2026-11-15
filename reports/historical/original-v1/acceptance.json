@@ -1,0 +1,45 @@
+{
+  "mode": "fixture",
+  "transport": "real HTTP + MCP Streamable HTTP + Chromium UI + process restart",
+  "checks": {
+    "timeout_restart_reconciliation": {
+      "passed": true,
+      "writes_before_restart": 1,
+      "writes_after_restart": 1,
+      "failure_type": "TimeoutError",
+      "case_id": "cd8cc87c-c442-4692-9478-51364daa813e"
+    },
+    "scan_correction_approval_visible_ui": {
+      "passed": true,
+      "case_id": "ba89e6f2-2e25-475b-9951-2e31858a76cb"
+    },
+    "adversarial_document_no_unauthorized_tools": {
+      "passed": true,
+      "case_id": "02ef6bbd-0f26-4405-b10c-a03cefadd174"
+    },
+    "expired_session": {
+      "passed": true,
+      "case_id": "1ece3954-cf68-4816-958d-98445e3e60ce",
+      "bounded_attempts": 3,
+      "writes": 0
+    },
+    "changed_selector": {
+      "passed": true,
+      "case_id": "42119e81-30b9-4a34-b8f1-43e40b68c596",
+      "bounded_attempts": 3,
+      "writes": 0
+    },
+    "dashboard_browser": {
+      "passed": true,
+      "screenshot": "D:\\RESUME PROJECTS\\PharmacyFlow AI\\data\\acceptance-cabb51d7\\dashboard.png"
+    }
+  },
+  "cases": [
+    "cd8cc87c-c442-4692-9478-51364daa813e",
+    "ba89e6f2-2e25-475b-9951-2e31858a76cb",
+    "02ef6bbd-0f26-4405-b10c-a03cefadd174",
+    "1ece3954-cf68-4816-958d-98445e3e60ce",
+    "42119e81-30b9-4a34-b8f1-43e40b68c596"
+  ],
+  "passed": true
+}

@@ -1,0 +1,256 @@
+{
+  "mode": "fixture",
+  "engine": "sqlite lexical + hashed-vector fallback",
+  "queries": 20,
+  "recall_at_3": 1.0,
+  "mrr": 0.95,
+  "citation_correctness": 1.0,
+  "adversarial_checks": {
+    "stale_version_blocked": true,
+    "wrong_tenant_blocked": true,
+    "modified_policy_blocked": true
+  },
+  "rows": [
+    {
+      "query": "active prescription remaining refills",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "confirm simulated identity prescription selection",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "record refill request pharmacist processing",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "refill request never authorizes dispensing",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:recovery-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "missing unreadable conflicting uncertain fields",
+      "expected": "review-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:refill-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "pharmacist approve corrected intake draft",
+      "expected": "review-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:refill-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "approval action digest invalid after correction",
+      "expected": "review-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:recovery-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "prescription review missing information",
+      "expected": "review-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 0.5,
+      "citations_correct": true
+    },
+    {
+      "query": "exhausted refills inactive prescriptions",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:escalation-v1",
+        "demo:refill-v1",
+        "demo:review-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "failed identity ambiguous patient matches",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:escalation-v1",
+        "demo:refill-v1",
+        "demo:review-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "do not infer medication strength",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:escalation-v1",
+        "demo:refill-v1",
+        "demo:review-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "never choose patient name alone",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:escalation-v1",
+        "demo:refill-v1",
+        "demo:privacy-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "timeout check persisted request before writing",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:recovery-v1",
+        "demo:refill-v1",
+        "demo:review-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "status idempotency key retry",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:recovery-v1",
+        "demo:refill-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "saved action digest differs escalate",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:recovery-v1",
+        "demo:review-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "recover lost response after write",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:recovery-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 0.5,
+      "citations_correct": true
+    },
+    {
+      "query": "tenant patient case tool scope",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:escalation-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "documents tool outputs untrusted data",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:refill-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "ignore embedded instructions",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:review-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "retention synthetic records period",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:review-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    }
+  ],
+  "limitation": "Not a live embedding or PostgreSQL performance benchmark; PostgreSQL engine is separately checked by Compose CI."
+}

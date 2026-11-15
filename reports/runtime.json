@@ -1,0 +1,21 @@
+{
+  "platform": "Windows",
+  "python_version": "3.12.14",
+  "python_supported": true,
+  "uv": {
+    "available": true,
+    "version": "uv 0.12.18 (01cb90c1a 2026-09-22 x86_64-pc-windows-msvc)"
+  },
+  "node": {
+    "available": true,
+    "version": "v24.22.1"
+  },
+  "npm": {
+    "available": false
+  },
+  "docker": {
+    "available": false
+  },
+  "local_npm": true,
+  "local_chromium": true
+}

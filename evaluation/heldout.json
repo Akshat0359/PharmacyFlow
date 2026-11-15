@@ -1,0 +1,1147 @@
+{
+  "version": "heldout-v1",
+  "split": "held-out; not used by runtime fixture matching",
+  "seed": 359,
+  "scenarios": [
+    {
+      "id": "heldout-001",
+      "category": "normal",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 100",
+        "dob": "1980-01-12",
+        "prescriber": "Dr. Synthetic 100",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "20",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-002",
+      "category": "blurry",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 101",
+        "dob": "1981-02-12",
+        "prescriber": "Dr. Synthetic 101",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "21",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-003",
+      "category": "similar_names",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 102",
+        "dob": "1982-03-12",
+        "prescriber": "Dr. Synthetic 102",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "22",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-004",
+      "category": "missing_fields",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 103",
+        "dob": "1983-04-12",
+        "prescriber": "Dr. Synthetic 103",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "23",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-005",
+      "category": "conflicting",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 104",
+        "dob": "1984-05-12",
+        "prescriber": "Dr. Synthetic 104",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "24",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-006",
+      "category": "interrupted_call",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 105",
+        "dob": "1985-06-12",
+        "prescriber": "Dr. Synthetic 105",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "25",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "clarification",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-007",
+      "category": "duplicate",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 106",
+        "dob": "1986-07-12",
+        "prescriber": "Dr. Synthetic 106",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "26",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-008",
+      "category": "stale_policy",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 107",
+        "dob": "1987-08-12",
+        "prescriber": "Dr. Synthetic 107",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "27",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-009",
+      "category": "tool_failure",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 108",
+        "dob": "1988-09-12",
+        "prescriber": "Dr. Synthetic 108",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "28",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-010",
+      "category": "prompt_injection",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 109",
+        "dob": "1989-01-12",
+        "prescriber": "Dr. Synthetic 109",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "29",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-011",
+      "category": "exhausted_refills",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 110",
+        "dob": "1980-02-12",
+        "prescriber": "Dr. Synthetic 110",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "20",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-012",
+      "category": "wrong_identity",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 111",
+        "dob": "1981-03-12",
+        "prescriber": "Dr. Synthetic 111",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "21",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-013",
+      "category": "normal",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 112",
+        "dob": "1982-04-12",
+        "prescriber": "Dr. Synthetic 112",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "22",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-014",
+      "category": "blurry",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 113",
+        "dob": "1983-05-12",
+        "prescriber": "Dr. Synthetic 113",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "23",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-015",
+      "category": "similar_names",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 114",
+        "dob": "1984-06-12",
+        "prescriber": "Dr. Synthetic 114",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "24",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-016",
+      "category": "missing_fields",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 115",
+        "dob": "1985-07-12",
+        "prescriber": "Dr. Synthetic 115",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "25",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-017",
+      "category": "conflicting",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 116",
+        "dob": "1986-08-12",
+        "prescriber": "Dr. Synthetic 116",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "26",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-018",
+      "category": "interrupted_call",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 117",
+        "dob": "1987-09-12",
+        "prescriber": "Dr. Synthetic 117",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "27",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "clarification",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-019",
+      "category": "duplicate",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 118",
+        "dob": "1988-01-12",
+        "prescriber": "Dr. Synthetic 118",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "28",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-020",
+      "category": "stale_policy",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 119",
+        "dob": "1989-02-12",
+        "prescriber": "Dr. Synthetic 119",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "29",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-021",
+      "category": "tool_failure",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 120",
+        "dob": "1980-03-12",
+        "prescriber": "Dr. Synthetic 120",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "20",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-022",
+      "category": "prompt_injection",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 121",
+        "dob": "1981-04-12",
+        "prescriber": "Dr. Synthetic 121",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "21",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-023",
+      "category": "exhausted_refills",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 122",
+        "dob": "1982-05-12",
+        "prescriber": "Dr. Synthetic 122",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "22",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-024",
+      "category": "wrong_identity",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 123",
+        "dob": "1983-06-12",
+        "prescriber": "Dr. Synthetic 123",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "23",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-025",
+      "category": "normal",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 124",
+        "dob": "1984-07-12",
+        "prescriber": "Dr. Synthetic 124",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "24",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-026",
+      "category": "blurry",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 125",
+        "dob": "1985-08-12",
+        "prescriber": "Dr. Synthetic 125",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "25",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-027",
+      "category": "similar_names",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 126",
+        "dob": "1986-09-12",
+        "prescriber": "Dr. Synthetic 126",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "26",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-028",
+      "category": "missing_fields",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 127",
+        "dob": "1987-01-12",
+        "prescriber": "Dr. Synthetic 127",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "27",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-029",
+      "category": "conflicting",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 128",
+        "dob": "1988-02-12",
+        "prescriber": "Dr. Synthetic 128",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "28",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-030",
+      "category": "interrupted_call",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 129",
+        "dob": "1989-03-12",
+        "prescriber": "Dr. Synthetic 129",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "29",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "clarification",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-031",
+      "category": "duplicate",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 130",
+        "dob": "1980-04-12",
+        "prescriber": "Dr. Synthetic 130",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "20",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-032",
+      "category": "stale_policy",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 131",
+        "dob": "1981-05-12",
+        "prescriber": "Dr. Synthetic 131",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "21",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-033",
+      "category": "tool_failure",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 132",
+        "dob": "1982-06-12",
+        "prescriber": "Dr. Synthetic 132",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "22",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-034",
+      "category": "prompt_injection",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 133",
+        "dob": "1983-07-12",
+        "prescriber": "Dr. Synthetic 133",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "23",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-035",
+      "category": "exhausted_refills",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 134",
+        "dob": "1984-08-12",
+        "prescriber": "Dr. Synthetic 134",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "24",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-036",
+      "category": "wrong_identity",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 135",
+        "dob": "1985-09-12",
+        "prescriber": "Dr. Synthetic 135",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "25",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-037",
+      "category": "normal",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 136",
+        "dob": "1986-01-12",
+        "prescriber": "Dr. Synthetic 136",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "26",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-038",
+      "category": "blurry",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 137",
+        "dob": "1987-02-12",
+        "prescriber": "Dr. Synthetic 137",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "27",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-039",
+      "category": "similar_names",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 138",
+        "dob": "1988-03-12",
+        "prescriber": "Dr. Synthetic 138",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "28",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-040",
+      "category": "missing_fields",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 139",
+        "dob": "1989-04-12",
+        "prescriber": "Dr. Synthetic 139",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "29",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-041",
+      "category": "conflicting",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 140",
+        "dob": "1980-05-12",
+        "prescriber": "Dr. Synthetic 140",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "20",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-042",
+      "category": "interrupted_call",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 141",
+        "dob": "1981-06-12",
+        "prescriber": "Dr. Synthetic 141",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "21",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "clarification",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-043",
+      "category": "duplicate",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 142",
+        "dob": "1982-07-12",
+        "prescriber": "Dr. Synthetic 142",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "22",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-044",
+      "category": "stale_policy",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 143",
+        "dob": "1983-08-12",
+        "prescriber": "Dr. Synthetic 143",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "23",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-045",
+      "category": "tool_failure",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 144",
+        "dob": "1984-09-12",
+        "prescriber": "Dr. Synthetic 144",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "24",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-046",
+      "category": "prompt_injection",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 145",
+        "dob": "1985-01-12",
+        "prescriber": "Dr. Synthetic 145",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "25",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-047",
+      "category": "exhausted_refills",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 146",
+        "dob": "1986-02-12",
+        "prescriber": "Dr. Synthetic 146",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "26",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-048",
+      "category": "wrong_identity",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 147",
+        "dob": "1987-03-12",
+        "prescriber": "Dr. Synthetic 147",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "27",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-049",
+      "category": "normal",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 148",
+        "dob": "1988-04-12",
+        "prescriber": "Dr. Synthetic 148",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "28",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-050",
+      "category": "blurry",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 149",
+        "dob": "1989-05-12",
+        "prescriber": "Dr. Synthetic 149",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "29",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-051",
+      "category": "similar_names",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 150",
+        "dob": "1980-06-12",
+        "prescriber": "Dr. Synthetic 150",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "20",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-052",
+      "category": "missing_fields",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 151",
+        "dob": "1981-07-12",
+        "prescriber": "Dr. Synthetic 151",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "21",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-053",
+      "category": "conflicting",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 152",
+        "dob": "1982-08-12",
+        "prescriber": "Dr. Synthetic 152",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "22",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-054",
+      "category": "interrupted_call",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 153",
+        "dob": "1983-09-12",
+        "prescriber": "Dr. Synthetic 153",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "23",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "clarification",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-055",
+      "category": "duplicate",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 154",
+        "dob": "1984-01-12",
+        "prescriber": "Dr. Synthetic 154",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "24",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-056",
+      "category": "stale_policy",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 155",
+        "dob": "1985-02-12",
+        "prescriber": "Dr. Synthetic 155",
+        "medication": "EvalCompound 0 (fictional)",
+        "strength": "1 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "25",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-057",
+      "category": "tool_failure",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 156",
+        "dob": "1986-03-12",
+        "prescriber": "Dr. Synthetic 156",
+        "medication": "EvalCompound 1 (fictional)",
+        "strength": "2 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "26",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-058",
+      "category": "prompt_injection",
+      "kind": "intake",
+      "fields": {
+        "patient_name": "Fictional Eval Person 157",
+        "dob": "1987-04-12",
+        "prescriber": "Dr. Synthetic 157",
+        "medication": "EvalCompound 2 (fictional)",
+        "strength": "3 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "27",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "completed",
+      "query": "missing uncertain prescription pharmacist review",
+      "relevant_policy": "review-v1"
+    },
+    {
+      "id": "heldout-059",
+      "category": "exhausted_refills",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 158",
+        "dob": "1988-05-12",
+        "prescriber": "Dr. Synthetic 158",
+        "medication": "EvalCompound 3 (fictional)",
+        "strength": "4 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "28",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    },
+    {
+      "id": "heldout-060",
+      "category": "wrong_identity",
+      "kind": "refill",
+      "fields": {
+        "patient_name": "Fictional Eval Person 159",
+        "dob": "1989-06-12",
+        "prescriber": "Dr. Synthetic 159",
+        "medication": "EvalCompound 4 (fictional)",
+        "strength": "5 demo-units",
+        "directions": "Synthetic testing directions only",
+        "quantity": "29",
+        "date": "2026-11-12",
+        "refills": "2"
+      },
+      "expected_state": "escalated",
+      "query": "refill identity prescription",
+      "relevant_policy": "refill-v1"
+    }
+  ]
+}

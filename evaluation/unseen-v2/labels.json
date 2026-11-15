@@ -1,0 +1,1025 @@
+{
+  "version": "unseen-v2",
+  "rows": [
+    {
+      "input": "d18caf5d5221db98a0cff3ccebfdd8c8f4b074dc4ffed6b8018dabee3613a8a2.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1990-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "2 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "20",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 0
+    },
+    {
+      "input": "b7c1094f746cd4a3400855d822b75054ac33358905592aaf0c0250f62bc99985.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1991-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "3 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "21",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 0
+    },
+    {
+      "input": "de47c38adb33a10bd98df904ecf6544c6ad6d25db5da19a6f56b8935bf1226c9.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1992-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "4 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "22",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 0
+    },
+    {
+      "input": "86eab10b7b267fc8255141732a9f66337a8a6e886754c3fdd923fcbdcfdf17b4.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1993-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "5 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 1
+    },
+    {
+      "input": "343182f73e3fc61cd6e73667172957603d0d20bc5a2d3815cfdee5c6c2c11736.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1994-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "6 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 1
+    },
+    {
+      "input": "aa035455e2d3a02413d3ebb64a8af90e4d9bc0d1c34ebd39c5c1350249bd0aa7.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1995-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "7 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 1
+    },
+    {
+      "input": "d145af8f2b3b4df7602f5a67ccc76080d2b9d4c5959256dd60c341f1b176353a.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1996-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "26",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 2
+    },
+    {
+      "input": "b45f11afe57454ba2309e9ea5acb654bd052c02e3e23dc0148588ab6e2077080.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1997-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "27",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 2
+    },
+    {
+      "input": "1fbb4e08766ffdcb8e522fd87fa8327df03775c7b012a7717daf28c6da8c8016.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1998-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "28",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 2
+    },
+    {
+      "input": "bd6964bf7ea04c47e80bf6d7b379e624e3d1bdd2c76f71c127aff95711741410.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1999-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "11 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "29",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 3
+    },
+    {
+      "input": "1f5e8cc9cb6ec81e3d1437b6eb5d577e1e39a3208bcf3a4da88388ca912a56c1.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1990-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "12 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "30",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 3
+    },
+    {
+      "input": "9db8614511b9a0ea2fe36ae2d27ed699af7e11109da58d7d85056ab6c22bbc5a.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1991-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "13 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "31",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 3
+    },
+    {
+      "input": "5c29be5b6b0794e3df1f5c33859857a6473260cc14e6cd7abf9536840608e1bc.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1992-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "14 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "32",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 0
+    },
+    {
+      "input": "096ee05b3a3e5043697b3949b7c3ed31cc73aebdd429545d8b828165cda7f86d.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1993-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "15 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "33",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 0
+    },
+    {
+      "input": "2e0e5aa8f98d9dd03c93317bcfc5e1430bedcef961dc03e0ae450eab99f0c8f8.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1994-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "16 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "34",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 0
+    },
+    {
+      "input": "198b40629908a8e0f94edbfb848821176fe73790592da93d154dab19651d8fdb.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1995-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "17 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 1
+    },
+    {
+      "input": "471913c89ad21aaafabe07716fb47b7cfa031d1f3470483ea052191582670c65.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1996-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "18 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 1
+    },
+    {
+      "input": "aa7603862a52589b538297c8ede35d1b2cf713f144bad405732caf6f14395f32.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1997-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "19 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 1
+    },
+    {
+      "input": "79b04171132cf4d7774a34b6af21e6592b8692b2bbe169d07a0e24b97d436608.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1998-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "38",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 2
+    },
+    {
+      "input": "12926ca21974536f04a3fee258d48586fe938f3eec75f1605f80aaa9b3c31770.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1999-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "39",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 2
+    },
+    {
+      "input": "f25adf94708ef337e28f58101fd443debafb5c9337cc030963e3d2cb227dc389.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1990-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "40",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 2
+    },
+    {
+      "input": "336f1648bfb9b7e0d379fcc03b049ab850f30f08a749d311b683548d0360bf9e.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1991-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "23 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "41",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 3
+    },
+    {
+      "input": "dd6d74dfc7f775b309d81838a261fdcc586c8ade5bb53d5fe32bee7e2030f988.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1992-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "24 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "42",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 3
+    },
+    {
+      "input": "e16e0d1d015f0d8b3dea4821c8699dc4477c150f693396b52ac5748f2c0866bb.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1993-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "25 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "43",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 3
+    },
+    {
+      "input": "07c668c3a3a297d00ab245055e5317641c2452d87a371dd8dd8c71287a92dc2a.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1994-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "26 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "44",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 0
+    },
+    {
+      "input": "43b7b563d14510c2088bcde5c295513ac79e854c479c73434993cc5dd358204b.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1995-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "27 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "45",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 0
+    },
+    {
+      "input": "9ab424e3c5708a19b5ac3b00a44797bb76098c1b190986bb90f22a06336f0032.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1996-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "28 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "46",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 0
+    },
+    {
+      "input": "7b50ab0ae20aabde1b4d46c3259d2f218747a18a2b6f28a06cf1bfcbe2279bef.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1997-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "29 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 1
+    },
+    {
+      "input": "2cd29c792587554c39e0cdd62e0c1139c3e6b18ee5a852e5b2f4b1c6080dc875.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1998-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "30 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 1
+    },
+    {
+      "input": "6ae2aace11e7c1fac2e60c5e4416cd77496d010c50193019f368036ed45f0735.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1999-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "31 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 1
+    },
+    {
+      "input": "23aa275b9dfe3b0488aef9755a5f97919f05a5935175f2d0b17293988ad38c80.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1990-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "50",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 2
+    },
+    {
+      "input": "c3de1309f7a5b9d90a577d898b257b31a5800a560e9e4cd4071db34b444c4238.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1991-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "51",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 2
+    },
+    {
+      "input": "23ac573642b11f5d9deb573784b042aba67b00475ac9550c69d66f709b4897b4.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1992-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "52",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 2
+    },
+    {
+      "input": "da3c08a4f4bb932873440f1803fdb9814cb04c144e136b3201d1539e108a6ea0.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1993-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "35 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "53",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 3
+    },
+    {
+      "input": "465543b16e0d37ecd38c2e4144be8f4df815a496558bc3b1dea156910c00db9c.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1994-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "36 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "54",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 3
+    },
+    {
+      "input": "a7722163ea2a6e21a7a252acfcff15df16bad4c73799cd157fdfa48d5d25706a.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1995-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "37 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "55",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 3
+    },
+    {
+      "input": "afff4eb759e12b4bc4c9619387ef5ce2215d88af42e8047f400782e59ad40597.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1996-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "38 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "56",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 0
+    },
+    {
+      "input": "c8c399a1afbc636a4dade3cd54c195d543c3fcc6974c6c7a71d0b92b907cf19a.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1997-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "39 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "57",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 0
+    },
+    {
+      "input": "9dd96b48a0bfc4fc571d373e5e378cb81343574932ddd69c8e54fef11d075897.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1998-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "40 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "58",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 0
+    },
+    {
+      "input": "f518cc249e6884631d0cc085e3c753a758cf65acfb84d891fef044c62852aceb.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1999-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "41 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 1
+    },
+    {
+      "input": "03c24deac7fa2f9f36468970ced6c03f9c97a843296bf7799d43bda36781b000.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1990-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "42 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 1
+    },
+    {
+      "input": "1768818fb1dfcb8f8768c5ff0e953ac6cbf353afcf3a68108bdc61d85dc01c15.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1991-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "43 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 1
+    },
+    {
+      "input": "cb3a98f0db971c15a9470eca6747503e47e0f1cd0382939b2ee18897051342a5.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1992-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "62",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 2
+    },
+    {
+      "input": "a9d8e298224b9738954b9ea7627685c52d7953f0ea7409e83a0d3afc42406830.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1993-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "63",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 2
+    },
+    {
+      "input": "fb999062ea635f3a44d600008e932499f0c8837207cbdf079cb9a1645a8ae5da.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1994-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "64",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 2
+    },
+    {
+      "input": "d9ce3e5ac9afba370ddfbb71496f197a01e5de400bf19e2a572f806b2779c21a.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1995-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "47 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "65",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 3
+    },
+    {
+      "input": "bc0d2cb44fa6f38fd7bfe05068a482a6e769fda12a7e87362015929ab0cba3e1.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1996-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "48 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "66",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 3
+    },
+    {
+      "input": "778f8db3787e5a835b9a130570a0af604a2e2cf73a78755e6031db0e5aaf8b42.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1997-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "49 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "67",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 3
+    },
+    {
+      "input": "063a71291c6c118627a53e70dd4b967685e675a948f3c2e12e7a080ae017eeaa.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1998-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "50 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "68",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 0
+    },
+    {
+      "input": "295fcc0badc246b5e2707ac62b24feea6b1427f5b1c5a0bfc6c16ea10f04dee1.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1999-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "51 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "69",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 0
+    },
+    {
+      "input": "1fb377f52db4ce60126ccb2d8854d6ecc83f9e3d6dc4c741833c509893e2d320.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1990-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "52 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "70",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 0
+    },
+    {
+      "input": "12cea45ec0987daea9ad2e595f847a2c08251c9ea12be791601603f248438590.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1991-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "53 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 1
+    },
+    {
+      "input": "b1ca1d3b36b74e0249fa82ec6754d2b1b17ab7bb536ab9e6df806077bb177508.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1992-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "54 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 1
+    },
+    {
+      "input": "8ae057e14dfd6d3057d13c24dc73609a256beddc5349683e8bade077116759e0.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1993-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "55 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": null,
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 1
+    },
+    {
+      "input": "74ae779b577aef4376577303b6d52b3e1ee7b56d238f2759c15aed51fe80f8c5.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1994-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "74",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 2
+    },
+    {
+      "input": "e3e4ad3f98acdfbbcd02fa08c70931aad09b7febec8889ca2a116a07d10c9972.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Mira Senwick",
+        "dob": "1995-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "75",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 2
+    },
+    {
+      "input": "2b4ba49a0c21021dbd0d16b6e5625ed7626824fad49271a7b6650eb3c05486d1.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Jonah Velden",
+        "dob": "1996-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": null,
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "76",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 2
+    },
+    {
+      "input": "6af78a7d9d2df5b9c516eb506eea2547d94d533191486d042b4f1215af753583.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Tessa Brookfield",
+        "dob": "1997-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "59 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "77",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 0,
+      "condition": 3
+    },
+    {
+      "input": "459ac15ad831f701a3910c3e2639ed988d35266b7f392fc20a4cecb883ca8b5c.pdf",
+      "mime": "application/pdf",
+      "expected": {
+        "patient_name": "Emil Norcrest",
+        "dob": "1998-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "60 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "78",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 1,
+      "condition": 3
+    },
+    {
+      "input": "58fa5decca1b9b5e8eb1564a5a1194b8334d8c8f66ad2915f3a9679e38e6aed1.png",
+      "mime": "image/png",
+      "expected": {
+        "patient_name": "Nina Hartwell",
+        "dob": "1999-03-17",
+        "prescriber": "Dr Fictional Vale",
+        "medication": "Synthorin (fictional)",
+        "strength": "61 demo-units",
+        "directions": "One simulated unit each fictional morning",
+        "quantity": "79",
+        "date": "2026-10-20",
+        "refills": "2"
+      },
+      "layout": 2,
+      "condition": 3
+    }
+  ]
+}

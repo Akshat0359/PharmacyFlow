@@ -1,0 +1,8 @@
+{
+  "level": 3,
+  "mode": "live",
+  "status": "skipped",
+  "reason": "Requires OPENAI_API_KEY, --budget-usd, LIVE_TOTAL_BUDGET_USD and LIVE_CALL_RESERVATION_USD",
+  "calibration": "pending",
+  "paid_calls": 0
+}

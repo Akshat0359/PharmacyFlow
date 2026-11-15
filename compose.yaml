@@ -1,0 +1,101 @@
+name: pharmacyflow
+x-app: &app
+  build: .
+  image: pharmacyflow-ai:local
+  env_file: .env
+  environment: &environment
+    DATABASE_URL: postgresql+psycopg://pharmacy:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/pharmacyflow
+    MOCK_DATABASE_URL: postgresql+psycopg://pharmacy:${POSTGRES_PASSWORD}@db:5432/mockpharmacy
+    CHECKPOINT_URL: postgresql://pharmacy:${POSTGRES_PASSWORD}@db:5432/pharmacyflow
+    DATA_DIR: /app/data
+    MOCK_URL: http://mock:8001
+    MCP_URL: http://mcp:8002/mcp
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel:4318
+  volumes:
+    - appdata:/app/data
+    - reports:/app/reports
+  restart: unless-stopped
+  init: true
+  stop_grace_period: 50s
+services:
+  db:
+    image: pgvector/pgvector:0.8.1-pg17
+    environment:
+      POSTGRES_USER: pharmacy
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+      POSTGRES_DB: pharmacyflow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./deploy/init-db.sql:/docker-entrypoint-initdb.d/01-mock.sql:ro
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U pharmacy -d pharmacyflow"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+  migrate:
+    <<: *app
+    command: [sh, -c, "alembic upgrade head && python -m pharmacyflow.seed"]
+    restart: "no"
+    depends_on:
+      db: {condition: service_healthy}
+  api:
+    <<: *app
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      mcp: {condition: service_started}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ready')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  mock:
+    <<: *app
+    command: [uvicorn, pharmacyflow.mock_app:app, --host, 0.0.0.0, --port, "8001"]
+    ports: ["127.0.0.1:8001:8001"]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  mcp:
+    <<: *app
+    command: [python, -m, pharmacyflow.mcp_server]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+  worker:
+    <<: *app
+    command: [python, -m, pharmacyflow.worker]
+    depends_on:
+      mock: {condition: service_healthy}
+      mcp: {condition: service_started}
+  otel:
+    image: otel/opentelemetry-collector-contrib:0.139.0
+    command: [--config=/etc/otel/config.yaml]
+    volumes: ["./deploy/otel.yaml:/etc/otel/config.yaml:ro"]
+    depends_on: [jaeger]
+    restart: unless-stopped
+  jaeger:
+    image: jaegertracing/jaeger:2.12.0
+    user: "10001:10001"
+    depends_on:
+      trace-init: {condition: service_completed_successfully}
+    ports: ["127.0.0.1:16686:16686"]
+    volumes:
+      - ./deploy/jaeger.yaml:/etc/jaeger/config.yaml:ro
+      - traces:/traces
+    command: [--config=/etc/jaeger/config.yaml]
+    restart: unless-stopped
+  trace-init:
+    image: busybox:1.37.0
+    command: [sh, -c, "mkdir -p /traces/keys /traces/values && chown -R 10001:10001 /traces"]
+    volumes: ["traces:/traces"]
+    restart: "no"
+volumes:
+  pgdata:
+  appdata:
+  reports:
+  traces:

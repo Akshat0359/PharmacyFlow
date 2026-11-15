@@ -1,0 +1,60 @@
+name: verify-synthetic-demo
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.12.18'
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.11.1'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: uv sync --frozen
+      - run: npm ci --prefix frontend && npm run build --prefix frontend
+      - run: uv run python scripts/setup.py && uv run alembic upgrade head && uv run python -m pharmacyflow.seed
+      - run: uv run pytest -q --junitxml reports/tests.xml
+      - run: uv run playwright install --with-deps chromium
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: .tools/browsers
+      - run: uv run python scripts/acceptance.py
+      - run: uv run python -m evaluation.run --trials 3
+      - run: uv run python -m evaluation.retrieval
+      - run: uv run python -m evaluation.unseen
+      - run: uv run python scripts/validate_deployment.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: measured-results
+          path: reports/
+  postgres-compose:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          cp .env.example .env
+          sed -i "s/replace-with-at-least-32-random-characters/$(openssl rand -hex 32)/;s/replace-with-a-local-demo-password/$(openssl rand -hex 16)/" .env
+          echo "POSTGRES_PASSWORD=$(openssl rand -hex 24)" >> .env
+          docker compose config --quiet
+          docker compose up --build -d
+          timeout 180 sh -c 'until curl -fsS http://localhost:8000/ready; do sleep 3; done'
+          docker compose exec -T api python scripts/postgres_check.py
+          docker compose exec -T api python scripts/acceptance.py --postgres
+          docker compose restart worker api
+          timeout 120 sh -c 'until curl -fsS http://localhost:8000/ready; do sleep 2; done'
+          docker compose exec -T api python scripts/postgres_check.py
+          docker compose stop worker api mock mcp
+          python scripts/postgres_backup_check.py
+      - run: docker compose logs --no-color > compose.log
+        if: always()
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: compose-logs
+          path: compose.log
+      - run: docker compose down
+        if: always()

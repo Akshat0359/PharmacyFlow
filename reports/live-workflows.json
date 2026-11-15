@@ -1,0 +1,9 @@
+{
+  "level": 3,
+  "mode": "live",
+  "status": "skipped",
+  "reason": "Provider key, per-run budget and configured total/per-call reservations required",
+  "rows": [],
+  "calibration": "pending",
+  "paid_calls": 0
+}

@@ -1,0 +1,582 @@
+{
+  "run_at": "2026-11-13T12:02:10.385693+00:00",
+  "query_set": "retrieval-v2-40-positive-20-negative",
+  "configuration": {
+    "rrf_k": 60,
+    "limit": 3,
+    "embedding": "fixture-hash64",
+    "dimensions": 64,
+    "policy_version": "1",
+    "tenant": "demo"
+  },
+  "corpus_sha256": "4ee34cb1c3bfaea249e8dfe965da1a10bd04b02998326ac1d2fcbbf4e6e085f5",
+  "mode": "fixture",
+  "engine": "sqlite lexical + hashed-vector fallback",
+  "queries": 40,
+  "recall_at_3": 0.9,
+  "mrr": 0.8416666666666666,
+  "citation_correctness": 1.0,
+  "adversarial_checks": {
+    "stale_version_blocked": true,
+    "wrong_tenant_blocked": true,
+    "modified_policy_blocked": true
+  },
+  "negative_queries": [
+    {
+      "query": "weather tomorrow Paris",
+      "abstained": true
+    },
+    {
+      "query": "football match score",
+      "abstained": true
+    },
+    {
+      "query": "bake a chocolate cake",
+      "abstained": true
+    },
+    {
+      "query": "calculate a mortgage",
+      "abstained": true
+    },
+    {
+      "query": "quantum mechanics lecture",
+      "abstained": true
+    },
+    {
+      "query": "write a poem",
+      "abstained": true
+    },
+    {
+      "query": "book a train journey",
+      "abstained": true
+    },
+    {
+      "query": "repair a laptop",
+      "abstained": true
+    },
+    {
+      "query": "mountain hiking equipment",
+      "abstained": true
+    },
+    {
+      "query": "translate Japanese poetry",
+      "abstained": true
+    },
+    {
+      "query": "refill the car with petrol",
+      "abstained": false
+    },
+    {
+      "query": "review my movie script",
+      "abstained": false
+    },
+    {
+      "query": "prescription for a healthy economy",
+      "abstained": false
+    },
+    {
+      "query": "patient gardening instructions",
+      "abstained": false
+    },
+    {
+      "query": "record my music album",
+      "abstained": true
+    },
+    {
+      "query": "tool for drilling concrete",
+      "abstained": false
+    },
+    {
+      "query": "identity matrix determinant",
+      "abstained": false
+    },
+    {
+      "query": "recover deleted vacation photos",
+      "abstained": true
+    },
+    {
+      "query": "approve a bank loan",
+      "abstained": false
+    },
+    {
+      "query": "privacy policy of a social network",
+      "abstained": true
+    }
+  ],
+  "negative_abstention_accuracy": 0.65,
+  "rows": [
+    {
+      "query": "active prescription remaining refills",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "confirm simulated identity prescription selection",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "record refill request pharmacist processing",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "refill request never authorizes dispensing",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:recovery-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "May a current prescription with repeats left be entered?",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "What must the patient confirm before renewal?",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:privacy-v1",
+        "demo:review-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "Does submitting my request mean medicine has been dispensed?",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "record a repeat order after identity confirmation",
+      "expected": "refill-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:escalation-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "citations_correct": true
+    },
+    {
+      "query": "missing unreadable conflicting uncertain fields",
+      "expected": "review-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:refill-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "pharmacist approve corrected intake draft",
+      "expected": "review-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:refill-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "approval action digest invalid after correction",
+      "expected": "review-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:recovery-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "prescription review missing information",
+      "expected": "review-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 0.5,
+      "citations_correct": true
+    },
+    {
+      "query": "The scanned quantity cannot be read clearly",
+      "expected": "review-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:refill-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": false,
+      "reciprocal_rank": 0,
+      "citations_correct": true
+    },
+    {
+      "query": "A reviewer edited the draft after signing it",
+      "expected": "review-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:recovery-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "Who may accept a corrected prescription?",
+      "expected": "review-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:refill-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "What if the directions conflict on two pages?",
+      "expected": "review-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:recovery-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "exhausted refills inactive prescriptions",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:escalation-v1",
+        "demo:refill-v1",
+        "demo:review-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "failed identity ambiguous patient matches",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:escalation-v1",
+        "demo:refill-v1",
+        "demo:review-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "do not infer medication strength",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:escalation-v1",
+        "demo:refill-v1",
+        "demo:review-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "never choose patient name alone",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:escalation-v1",
+        "demo:refill-v1",
+        "demo:privacy-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "Two patients have identical names",
+      "expected": "escalation-v1",
+      "returned": [],
+      "hit_at_3": false,
+      "reciprocal_rank": 0,
+      "citations_correct": true
+    },
+    {
+      "query": "No refills remain on the inactive record",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:escalation-v1",
+        "demo:recovery-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "The caller failed verification repeatedly",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:escalation-v1",
+        "demo:review-v1",
+        "demo:privacy-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "Can we guess an illegible strength?",
+      "expected": "escalation-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:privacy-v1"
+      ],
+      "hit_at_3": false,
+      "reciprocal_rank": 0,
+      "citations_correct": true
+    },
+    {
+      "query": "timeout check persisted request before writing",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:recovery-v1",
+        "demo:refill-v1",
+        "demo:review-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "status idempotency key retry",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:recovery-v1",
+        "demo:refill-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "saved action digest differs escalate",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:recovery-v1",
+        "demo:review-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "recover lost response after write",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:review-v1",
+        "demo:recovery-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 0.5,
+      "citations_correct": true
+    },
+    {
+      "query": "The website saved but the acknowledgement never arrived",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:recovery-v1",
+        "demo:review-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "A restarted worker is unsure whether the write succeeded",
+      "expected": "recovery-v1",
+      "returned": [],
+      "hit_at_3": false,
+      "reciprocal_rank": 0,
+      "citations_correct": true
+    },
+    {
+      "query": "The stored action differs from what we proposed",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:recovery-v1",
+        "demo:review-v1",
+        "demo:privacy-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "Which identifier survives a retry after a timeout?",
+      "expected": "recovery-v1",
+      "returned": [
+        "demo:recovery-v1",
+        "demo:review-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "tenant patient case tool scope",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:escalation-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "documents tool outputs untrusted data",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:refill-v1",
+        "demo:escalation-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "ignore embedded instructions",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:review-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "retention synthetic records period",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:review-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "A PDF asks the agent to ignore its instructions",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:review-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "A tool response tries to request another tenant's data",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:refill-v1",
+        "demo:recovery-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "How long should synthetic records be kept?",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:privacy-v1",
+        "demo:escalation-v1",
+        "demo:refill-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0,
+      "citations_correct": true
+    },
+    {
+      "query": "Which scope limits an assistant's tools?",
+      "expected": "privacy-v1",
+      "returned": [
+        "demo:refill-v1",
+        "demo:review-v1",
+        "demo:privacy-v1"
+      ],
+      "hit_at_3": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "citations_correct": true
+    }
+  ],
+  "limitation": "Not a live embedding or PostgreSQL performance benchmark; PostgreSQL engine is separately checked by Compose CI."
+}

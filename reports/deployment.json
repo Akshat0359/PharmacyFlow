@@ -1,0 +1,7 @@
+{
+  "static_config": "passed",
+  "compose_config": "not_run_docker_unavailable",
+  "live_cloud": "not_run_requires_host_dns_and_paid_resources",
+  "postgres_acceptance": "not_run_requires_docker_or_test_postgresql",
+  "migration_preservation": "see_tests_test_migrations"
+}

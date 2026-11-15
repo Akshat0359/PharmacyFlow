@@ -1,0 +1,85 @@
+{
+  "mode": "fixture",
+  "level": "real_transport_sqlite",
+  "database": "sqlite",
+  "transport": "real HTTP + MCP Streamable HTTP + Chromium UI + process restart",
+  "checks": {
+    "timeout_restart_reconciliation": {
+      "passed": true,
+      "writes_before_restart": 1,
+      "writes_after_restart": 1,
+      "failure_type": "TimeoutError",
+      "case_id": "a3490f93-bb09-4078-ab27-a8bab258c3de"
+    },
+    "real_mcp_scope_rejections": {
+      "passed": true,
+      "cases": 4
+    },
+    "scan_correction_approval_visible_ui": {
+      "passed": true,
+      "case_id": "db56b377-cfb8-406f-b142-d5609b0a0d46"
+    },
+    "adversarial_document_no_unauthorized_tools": {
+      "passed": true,
+      "case_id": "c51843cd-8fcd-4cf6-a89d-869896ddec09"
+    },
+    "unseen_content_intake": {
+      "passed": true,
+      "case_id": "bfb606c2-0e45-4a0d-a453-3f961d0e3b37",
+      "mode": "fixture_content_text_parser"
+    },
+    "expired_session": {
+      "passed": true,
+      "case_id": "3f1d19ea-6488-4451-bd09-322f6c122bf7",
+      "bounded_attempts": 3,
+      "writes": 0
+    },
+    "changed_selector": {
+      "passed": true,
+      "case_id": "60e8fd95-b476-42bf-aab7-2c4d2687160c",
+      "bounded_attempts": 3,
+      "writes": 0
+    },
+    "slow_page": {
+      "passed": true,
+      "case_id": "479f2c5d-4e4f-4ebb-afff-793b5c239f26",
+      "bounded_attempts": 3,
+      "writes": 0
+    },
+    "missing_element": {
+      "passed": true,
+      "case_id": "2c16b9f2-920c-478a-b2f2-3353312564c9",
+      "bounded_attempts": 3,
+      "writes": 0
+    },
+    "incorrect_patient": {
+      "passed": true,
+      "case_id": "8e44bb28-73af-4ad8-a6b1-1aa5ac953b55",
+      "bounded_attempts": 3,
+      "writes": 0
+    },
+    "browser_crash": {
+      "passed": true,
+      "case_id": "0e0ca23c-eb8a-400b-abcd-851739af9f36",
+      "bounded_attempts": 3,
+      "writes": 0
+    },
+    "dashboard_browser": {
+      "passed": true,
+      "screenshot": "D:\\RESUME PROJECTS\\PharmacyFlow AI\\data\\acceptance-a7b2b95b\\dashboard.png"
+    }
+  },
+  "cases": [
+    "a3490f93-bb09-4078-ab27-a8bab258c3de",
+    "db56b377-cfb8-406f-b142-d5609b0a0d46",
+    "c51843cd-8fcd-4cf6-a89d-869896ddec09",
+    "bfb606c2-0e45-4a0d-a453-3f961d0e3b37",
+    "3f1d19ea-6488-4451-bd09-322f6c122bf7",
+    "60e8fd95-b476-42bf-aab7-2c4d2687160c",
+    "479f2c5d-4e4f-4ebb-afff-793b5c239f26",
+    "2c16b9f2-920c-478a-b2f2-3353312564c9",
+    "8e44bb28-73af-4ad8-a6b1-1aa5ac953b55",
+    "0e0ca23c-eb8a-400b-abcd-851739af9f36"
+  ],
+  "passed": true
+}
